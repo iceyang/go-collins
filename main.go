@@ -7,7 +7,7 @@ import (
 	"regexp"
 )
 
-const matchExp = "^(N|V|AD|PHRASE|→|CON|PREP)+"
+const matchExp = "(^(N|V|AD|PHRASE|CON|PREP)+|→)+"
 
 func main() {
 	result := ""
@@ -22,7 +22,7 @@ func main() {
 		}
 		ok, _ := regexp.MatchString(matchExp, text)
 		if ok {
-			text = fmt.Sprintf("\n%d. %s\n", no, text)
+			text = fmt.Sprintf("\n%d. %s", no, text)
 			no++
 		}
 		result += text + "\n"
