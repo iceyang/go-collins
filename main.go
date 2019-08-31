@@ -7,7 +7,7 @@ import (
 	"regexp"
 )
 
-const matchExp = "(^(N|V|AD|PHRA|CON|PREP)+|→)+"
+const matchExp = "(^(QUANT|DET|PRON|N|V|AD|PHRA|CON|PREP)+|→)+"
 
 func main() {
 	result := ""
